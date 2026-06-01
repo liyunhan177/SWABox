@@ -1,3 +1,3 @@
-from . import MainPage, Settings, EMGToolPage
+from . import MainPage, Settings, EMGToolPage, ConsentPage
 
-__all__ = ["MainPage", "Settings", "EMGToolPage"]
+__all__ = ["MainPage", "Settings", "EMGToolPage", "ConsentPage"]

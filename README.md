@@ -39,25 +39,15 @@ SWABox/
 └── README.md                # 项目说明文档
 ```
 ##  安装指南
-### 1. 克隆项目
-```bash
-git clone https://github.com/liyunhan177/SWABox.git
-```
-### 2. 安装所欲依赖
-```bash
-# PySide6 GUI库
-pip install PySide6
+#### 详见 [用户手册](docs/user_manual.md)
 
-# logging 日志库
-pip install logging
+### 使用 Windows 安装包
+从 [https://github.com/SWABox/SWABox](https://github.com/SWABox/SWABox) 的 Releases 页面下载最新的 `.exe` 安装包（或 `.msi`、便携版压缩包）。
+1. 下载后双击运行
+2. 如果 Windows SmartScreen 弹出警告，点击"更多信息"然后选择"仍要运行"（这是打包工具常见的误报，并非安全问题；如果仍有顾虑，可以从源码运行）
+3. 安装路径建议不要包含中文，避免潜在兼容问题
+4. 如果启动后没反应，可以尝试右键以管理员身份运行
 
-# 设计工具
-pip install pyqt5-tools
-```
-### 3. 运行项目
-```bash
-python src/main.py
-```
 ##  使用指南
 
 ###  功能介绍
@@ -68,7 +58,19 @@ python src/main.py
 1. 运行项目
 2. 选择需要下载的工具类型
 3. 选择对应软件名称
-4. 自动跳转至官网下载
+4. 自动跳转至官网下载对应软件
+
+#### 手动添加本地工具
+1. 打开项目目录下的 `Tool` 目录
+2. 将需要添加的工具文件（如可执行文件、脚本、目录等）放入该目录下
+
+```
+注意：
+__若你是从安装程序安装的，则进入安装目录下的\SWABox-b0.3.0\_internal\目录下的的 Tool 目录__
+```
+
+3. 再次运行项目，在紧急工具界面的添加工具中添加该工具（待开发）
+4. 在紧急工具界面中使用该工具（待开发）
 
 ### 界面展示
 ![主页面](res/img/Main_Page.png "主界面演示")
@@ -77,7 +79,7 @@ python src/main.py
 #### 1. 主程序入口
 - `main.py`: 负责启动整个应用程序，并加载主界面。
 #### 2. 数据存储
-- `data.json`: 用于存储软件的下载链接和其他相关信息(后续将转为数据库形式存储)
+- `config.ini`: 用于存储软件的配置信息，如下载路径、日志路径等。
 #### 3. 资源文件夹
 - `sound`, `IMG`: 存放音频、图像等资源文件。
 #### 4. 开发与使用文档
@@ -86,20 +88,19 @@ python src/main.py
 
 ##  参与贡献
 #### __欢迎提交 Issue 和 Pull Request 来改进这个项目！__
-### Issus 模板：[issues模板](doc/PROJECT_DOCUMENTATION.md#Issue模板)
 
 ##  未来规划
 - [x] 工具类型的罗列
 - [ ] 实现运行日志生成
 - [x] 内置急救类软件
 - [ ] 数据存储转为数据库形式
-- [ ] 美化界面
-- [ ] 项目打包为exe
+- [x] 美化界面
+- [x] 项目打包为exe
 - [ ] 搭建镜像站，实现在线下载（资金充足的情况下）
 
 ##  特别说明
 
 #### __项目发起人语法欠佳 望理解__
-#### __项目内部分功能由AI生成,望知悉（文档除更新日志外，其余均由AI编写）__
+#### __项目内部分功能由AI生成,望知悉（文档除README外，其余均由AI编写 后续将逐步去AI化）__
 #### __有时部分文档会遗漏填写，望理解__
 <a href="https://ys-api.mihoyo.com/event/download_porter/link/ys_cn/official/pc_backup316">千万别点</a>

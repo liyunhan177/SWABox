@@ -32,12 +32,14 @@ class Ui_MainPage(object):
         self.icon = QLabel(MainPage)
         self.icon.setObjectName(u"icon")
         self.icon.setEnabled(True)
-        self.icon.setGeometry(QRect(40, 30, 121, 121))
+        self.icon.setGeometry(QRect(40, 30, 111, 111))
+        self.icon.setMinimumSize(QSize(0, 111))
         self.icon.setPixmap(QPixmap(u":/logo.png"))
         self.icon.setScaledContents(True)
         self.title = QLabel(MainPage)
         self.title.setObjectName(u"title")
-        self.title.setGeometry(QRect(150, 30, 251, 121))
+        self.title.setGeometry(QRect(150, 30, 251, 111))
+        self.title.setMinimumSize(QSize(0, 111))
         self.settings = QPushButton(MainPage)
         self.settings.setObjectName(u"settings")
         self.settings.setGeometry(QRect(290, 160, 91, 51))
@@ -74,9 +76,9 @@ class Ui_MainPage(object):
     # setupUi
 
     def retranslateUi(self, MainPage):
-        MainPage.setWindowTitle(QCoreApplication.translate("MainPage", u"\u7535\u6559\u59d4\u5de5\u5177\u7bb1", None))
+        MainPage.setWindowTitle(QCoreApplication.translate("MainPage", u"SWABox", None))
         self.icon.setText("")
-        self.title.setText(QCoreApplication.translate("MainPage", u"<html><head/><body><p align=\"center\"><span style=\" font-size:24pt; font-weight:700;\">\u7535\u6559\u59d4\u5de5\u5177\u7bb1</span></p></body></html>", None))
+        self.title.setText(QCoreApplication.translate("MainPage", u"<html><head/><body><p align=\"center\"><span style=\" font-size:36pt; font-weight:700; color:#22c55b;\">SWABox</span></p></body></html>", None))
         self.settings.setText(QCoreApplication.translate("MainPage", u"\u8bbe\u7f6e", None))
         self.exit.setText(QCoreApplication.translate("MainPage", u"\u9000\u51fa", None))
         self.help.setText(QCoreApplication.translate("MainPage", u"\u5e2e\u52a9", None))
